@@ -1,0 +1,72 @@
+* {
+  color: black;
+  font-family: Tahoma;
+}
+
+body {
+  background: url(../media/logoMarco.svg) no-repeat; 
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  animation: backgroundMovement 150s infinite;
+}
+
+@keyframes backgroundMovement {
+  from {background-position: 0 0;}
+  to {background-position: -600px 0px;}
+}
+
+.togglerIconTrue {
+	  animation: togglerRotationTrue 1s forwards;
+    transform-origin: right 50%;
+}
+
+@keyframes togglerRotationTrue {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-90deg);}
+}
+
+.togglerIconFalse {
+  	animation: togglerRotationFalse 1s forwards;
+    transform-origin: right 50%;
+}
+
+@keyframes togglerRotationFalse {
+    from {transform: rotate(-90deg);}
+    to {transform: rotate(0deg);}
+}
+
+#gif{
+  height: 100%;
+  width: 100%;
+}
+
+.logo{
+  height:auto;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+h1 {
+  border-right: solid 3px black;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-size: 48px;
+  animation: animatedText 4s steps(29,end) infinite;
+  color: white;
+}
+
+@keyframes animatedText{
+  from{width: 0;}
+  to{width: 530px;}
+}
+
+/* cursor animations */
+
+@keyframes animatedCursor{
+  from{border-right-color: black;}
+  to{border-right-color: transparent;}
+}
